@@ -1,13 +1,16 @@
 import { BrowserRouter } from 'react-router-dom'
+import TransactionProvider from './hooks/useTransactions'
 import AppRoutes from './routes'
 import { GlobalStyle } from './styles/global'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalStyle />
-      <AppRoutes />
-    </BrowserRouter>
+    <TransactionProvider>
+      <BrowserRouter>
+        <GlobalStyle />
+        <AppRoutes />
+      </BrowserRouter>
+    </TransactionProvider>
   )
 }
 
